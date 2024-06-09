@@ -1,13 +1,12 @@
-
 import java.util.Scanner;
 
-public class Main {
+public class Mainnn {
 	static Scanner scanner;
     static Database database;
     public static void main(String[] args) {
 
         database = new Database();
-        System.out.println("Welcome to Library Management System!");
+        System.out.println("Welcome to Library Managemenet System!");
         int option;
         do {
             System.out.println("""
@@ -18,8 +17,8 @@ public class Main {
             option = scanner.nextInt();
 
             switch (option) {
-                case 1 : login();
-                case 2 : newUser();
+                case 1 : login(); break;
+                case 2 : newUser(); break;
                 default : System.out.println("Error! Enter valid option.");
             }
         }
@@ -56,15 +55,15 @@ public class Main {
         User user;
         if(option == 1) {
             user = new Admin(name, email, phonenumber);
-            //database.AddUser(admin);
+        //    database.AddUser(admin);
         }
         else {
-            user = new Member(name, email, phonenumber);
-            //database.AddUser(user);
+            user = new NormalUser(name, email, phonenumber);
+          //  database.AddUser(user);
         }
         database.AddUser(user);
         user.menu(database, user);
-        // System.out.println("User created succesfully!");
+       // System.out.println("User created succesfully!");
     }
 
 }

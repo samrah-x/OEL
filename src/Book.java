@@ -1,5 +1,4 @@
 
-
 public class Book {
 	private String name;		//title
 	private String author;		//author
@@ -96,6 +95,12 @@ public class Book {
 
 	public void setBrwcopies(int brwcopies) {
 		this.brwcopies = brwcopies;
+	}
+	
+	public String toString2() {
+		String text =  name +"<N/>"+ author+"<N/>"+publisher+"<N/>"+address+"<N/>"+String.valueOf(qty)+"<N/>"
+						+String.valueOf(price)+"<N/>"+String.valueOf(brwcopies);
+		return text;
 	}
 	
 	

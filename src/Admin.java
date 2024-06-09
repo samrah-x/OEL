@@ -1,6 +1,4 @@
 
-
-
 import java.util.Scanner;
 
 public class Admin extends User {
@@ -46,9 +44,9 @@ public class Admin extends User {
 	    	this.operation[n-1].oper(database, user);
 	    	s.close();
 	    }
-
-        public String toString() {
-            String text = name + "<N/>" + email + "<N/>" + phonenumber + "<N/>" + "Admin"; 
-            return text;
-        }
+	    public String toString() {
+	        String text = name + "<N/>" + email + "<N/>" + phonenumber + "<N/>" + "Admin"; 
+	        return text;
+	         }
+	   
 }
