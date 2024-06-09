@@ -12,13 +12,13 @@ public class Database {
     private ArrayList<Book> books = new ArrayList<>();
     private ArrayList<String> booknames = new ArrayList<>();
     
-    private File usersFile = new File("C:\\chaljabhai\\Data\\Users");
-    private File booksFile = new File("C:\\chaljabhai\\Data\\Books");
-    private File folder = new File("C:\\chaljabhai\\Data");
+    private File usersFile = new File("C:\\Users\\HP\\OneDrive\\文档\\MCS\\Second Semester\\Object Oriented Programming\\OEL\\OEL\\src\\data\\Users");
+    private File booksFile = new File("C:\\Users\\HP\\OneDrive\\文档\\MCS\\Second Semester\\Object Oriented Programming\\OEL\\OEL\\src\\data\\Books");
+    private File folder = new File("C:\\Data");
     
     public Database() {
     	if(!folder.exists()) {
-    		folder.mkdir();
+    		folder.mkdirs();
     	}
     	if(!usersFile.exists()) {
     		try {
@@ -72,7 +72,7 @@ public class Database {
             BufferedReader br1 = new BufferedReader(new FileReader(usersFile));
             String s1;
             while ((s1 = br1.readLine()) != null) {
-                text1 += s1;
+                text1 = text1 + s1;
             }
             br1.close();
         }
@@ -109,7 +109,7 @@ public class Database {
             PrintWriter pw = new PrintWriter(usersFile);
             pw.print(text1);
             pw.close();
-           // System.err.println("Data Saved!");
+            // System.err.println("Data Saved!");
         } catch (Exception e) {
             System.err.println(e.toString());
         }

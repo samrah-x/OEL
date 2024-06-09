@@ -5,7 +5,7 @@ public class AddBook implements IOOperation{
 	@Override
 	public void oper(Database database, User user) {
 		
-		Scanner s = new Scanner(System.in);
+				Scanner s = new Scanner(System.in);
 		Book book = new Book();
 		System.out.println("Enter book name: ");
 		book.setName(s.next());
@@ -13,7 +13,7 @@ public class AddBook implements IOOperation{
 		book.setAuthor(s.next());
 		System.out.println("Enter book publisher: ");
 		book.setPublisher(s.next());
-		System.out.println("Enter Book collection: ");
+		System.out.println("Enter Book collection address: ");
 		book.setAddress(s.next());
 		System.out.println("Enter book Qty: ");
 		book.setQty(s.nextInt());
